@@ -9,15 +9,6 @@
       <el-button type="info">Info</el-button>
       <el-button type="warning">Warning</el-button>
       <el-button type="danger">Danger</el-button>
-      <a href="https://www.electronjs.org/" target="_blank">
-        <img src="./assets/electron.svg" class="logo electron" alt="Electron logo" />
-      </a>
-      <a href="https://vitejs.dev/" target="_blank">
-        <img src="./assets/vite.svg" class="logo" alt="Vite logo" />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-      </a>
     </div>
     <HelloWorld msg="Electron + Vite + Vue" />
     <div class="flex-center">
@@ -29,31 +20,13 @@
 
 <script setup lang="ts">
 import HelloWorld from "@/components/HelloWorld.vue";
+import fs from "fs";
+import { onMounted } from "vue";
+
+onMounted(() => {
+  const a = fs.readFileSync("//Users/li/Personal/electron-vite-vue-main/src/assets/json/authButtonList.json", "utf-8");
+  console.log(a);
+  const b = JSON.parse(a);
+  console.log(b);
+});
 </script>
-
-<style lang="scss" scoped>
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo.electron:hover {
-  filter: drop-shadow(0 0 2em #9feaf9);
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
