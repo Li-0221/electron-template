@@ -10,7 +10,6 @@
       <el-button type="warning">Warning</el-button>
       <el-button type="danger">Danger</el-button>
     </div>
-    <HelloWorld msg="Electron + Vite + Vue" />
     <div class="flex-center">
       Place static files into the <code>/public</code> folder
       <img style="width: 2.4em; margin-left: 0.4em" src="/logo.svg" alt="Logo" />
@@ -19,7 +18,6 @@
 </template>
 
 <script setup lang="ts">
-import HelloWorld from "@/components/HelloWorld.vue";
 import fs from "fs";
 import { onMounted } from "vue";
 

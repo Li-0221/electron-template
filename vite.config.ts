@@ -87,13 +87,13 @@ export default defineConfig(({ command }) => {
         "@": path.resolve(__dirname, "src")
       }
     },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `@use "@/style/element.scss" as *;`
-        }
-      }
-    },
+    // css: {
+    //   preprocessorOptions: {
+    //     scss: {
+    //       additionalData: `@use "@/style/element.scss" as *;`
+    //     }
+    //   }
+    // },
     server:
       process.env.VSCODE_DEBUG &&
       (() => {
