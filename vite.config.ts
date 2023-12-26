@@ -11,6 +11,7 @@ import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 // https://vitejs.dev/config/
+// @ts-ignore
 export default defineConfig(({ command }) => {
   rmSync("dist-electron", { recursive: true, force: true });
 
